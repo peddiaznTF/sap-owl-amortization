@@ -7,8 +7,11 @@ WORKDIR /app
 # Copiar archivos de dependencias
 COPY package*.json ./
 
+# # Instalar dependencias
+# RUN npm ci --only=production
+
 # Instalar dependencias
-RUN npm ci --only=production
+RUN npm install --production=false
 
 # Instalar OWL y dependencias de desarrollo
 RUN npm install @odoo/owl webpack webpack-cli webpack-dev-server \
