@@ -11,7 +11,8 @@ COPY package*.json ./
 # RUN npm ci --only=production
 
 # Instalar dependencias
-RUN npm install --production=false
+RUN npm install --production=false && \
+    npm install chart.js@^4.4.0
 
 # Instalar OWL y dependencias de desarrollo
 RUN npm install @odoo/owl webpack webpack-cli webpack-dev-server \

@@ -14,18 +14,15 @@ module.exports = (env, argv) => {
       clean: true,
     },
     devServer: {
-      contentBase: path.join(__dirname, 'public'),
-      port: 3000,
-      hot: true,
-      historyApiFallback: true,
-      proxy: {
-        '/api': {
-          target: 'http://localhost:8000',
-          changeOrigin: true,
-          secure: false
-        }
-      }
-    },
+  static: {
+    directory: path.join(__dirname, 'public'),
+  },
+  port: 3000,
+  open: true,
+  hot: true,
+  compress: true,
+  historyApiFallback: true, // útil si usas React Router, etc.
+},
     module: {
       rules: [
         {

@@ -11,7 +11,8 @@
     "lint:fix": "eslint src/ --fix"
   },
   "dependencies": {
-    "@odoo/owl": "^2.0.0"
+    "@odoo/owl": "^2.0.0",
+    "chart.js": "^4.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.22.0",
